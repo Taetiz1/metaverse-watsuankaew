@@ -35,7 +35,7 @@ router.use('*', (req, res) => {
 // Create express app and listen on port 4444
 const app = express()
 app.use(router)
-const server = app.listen(process.env.PORT || 4444, () => {
+const server = app.listen(process.env.PORT || 4000, () => {
     console.log(`Listening on port http://localhost:4444...`)
 })
 
