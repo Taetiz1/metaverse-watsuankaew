@@ -1,0 +1,99 @@
+@font-face {
+    font-family: 'kanit';
+    src: url('/public/fonts/kanit/kanit-light.otf') format('truetype');
+}
+
+.chatInputContainer {
+    position: relative;
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) auto;
+    align-items: center;
+    align-self: flex-end;
+    background-color: rgba(0,0,0,.25);
+    border-radius: 32px;
+    border-color: #eee;
+    padding: 0 16px;
+    height: 48px;
+    width: 100%;
+}
+
+.chatInputContainer .textareaContainer {
+    display: flex;
+}
+
+.chatInputContainer .textareaContainer textarea {
+    background-color: inherit;
+    border: none;
+    color: #fff;
+    font-size: .875rem;
+    flex: 1 1;
+    resize: none;
+    outline: none;
+    overflow: hidden;
+    font-family: 'kanit', sans-serif;
+}
+
+::placeholder {
+    color: white;
+}
+
+.ul_chatBox {
+    display: grid;
+    grid-auto-flow: row;
+    justify-items: flex-end;
+    grid-row-gap: 8px;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    padding-inline-start: 40px;
+    overflow-y: auto;
+    scrollbar-width: none; /* Firefox */
+    -ms-overflow-style: none; /* IE and Edge */
+    max-height: 600px;
+}
+
+.ul_chatBox::-webkit-scrollbar {
+    display: none; /* Chrome, Safari, and Opera */
+}
+
+.ul_chatBox .li_chatBox {
+    display: list-item;
+    text-align: justify;
+}
+
+.chatBox {
+    color: #fff;
+    background-color:  rgba(0, 0, 0, .25);;
+    position: relative;
+    padding: 8px 16px 8px 16px;
+    min-height: 32px;
+    border-radius: 32px;
+    font-size: .75rem;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: auto;
+    max-width: 300px;
+}
+
+.chatBox .name{
+    background-color: rgb(220, 20, 60, .6);
+    color: #eee;
+    font-weight: 600;
+    font-size: .875rem;
+    font-family: 'kanit', sans-serif;
+    border-radius: 8px;
+    padding: 2px 4px 2px 4px;
+}
+
+.chatBox .message{
+    word-break: break-all;
+    font-size: .875rem;
+    line-height: 1.2;
+    font-weight: 300;
+    font-family: 'kanit', sans-serif;
+}
