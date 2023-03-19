@@ -160,7 +160,7 @@ function Playground() {
 
   const messageListRef = useRef(null);
 
-  const Web_URL = 'https://metaverse-watsuankaew-712rarmv1-s6204062616243-kmutnbacth.vercel.app/'
+  const Web_URL = 'http://metaverse-watsuankaew-s6204062616243-kmutnbacth.vercel.app/'
 
   const handleSubmission = () => {
 
