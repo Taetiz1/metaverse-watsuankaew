@@ -189,7 +189,7 @@ function Playground() {
   useEffect(() => {
     // On mount initialize the socket connection
    if(logedIn === true){ 
-      setSocketClient(io())
+      setSocketClient(io(process.env.REACT_APP_SOCKET_SERVER_URL))
     }
     
     // Dispose gracefuly
