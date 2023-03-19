@@ -25,7 +25,7 @@ import interfacestyles from './Interface.module.css'
 const OtherPlayers = ({action}) => {
   const cloneRef = useRef()
 
-  const { scene, animations } = useLoader(GLTFLoader, '/public/models/character.glb')
+  const { scene, animations } = useLoader(GLTFLoader, '/public/models/character_2.glb')
   const clone = useMemo(() => SkeletonUtils.clone(scene), [scene])
   const {actions} = useAnimations(animations, cloneRef)
   
@@ -81,8 +81,7 @@ const UserWrapper = ({ position, rotation, name, action, id }) => {
          
         <OtherPlayers action={action} />
           <RotatingText 
-            position={[0, 3.5, 0]}
-            rotation={rotation}
+            position={[0, 4, 0]}
             color="black"
             anchorX="center"
             anchorY="middle"

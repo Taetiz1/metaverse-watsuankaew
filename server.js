@@ -4,6 +4,7 @@ import Router from 'express-promise-router'
 import { createServer } from 'vite'
 import viteConfig from './vite.config.js'
 import { Server } from 'socket.io'
+import http from 'http'
 
 // Create router
 const router = Router()
@@ -35,8 +36,11 @@ router.use('*', (req, res) => {
 // Create express app and listen on port 4444
 const app = express()
 app.use(router)
-const server = app.listen(process.env.PORT || 4000, () => {
-    console.log(`Listening on port http://localhost:4444...`)
+
+const port = process.env.PORT || 4000;
+
+const server = app.listen(port, () => {
+    console.log(`Listening on port http://localhost:${4000}...`)
 })
 
 const ioServer = new Server(server)
@@ -51,7 +55,7 @@ ioServer.on('connection', (client) => {
 
     clients[client.id] = {
         name: "",
-        position: [0, 0, 0],
+        position: [0, 1.5, 0],
         rotation: [0, 0, 0],
         action: "idle"
     }
