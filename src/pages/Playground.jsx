@@ -160,7 +160,7 @@ function Playground() {
 
   const messageListRef = useRef(null);
 
-  const Web_URL = 'http://metaverse-watsuankaew-s6204062616243-kmutnbacth.vercel.app/'
+  const Web_URL = 'http://metaverse-watsuankaew-s6204062616243-kmutnbacth.vercel.app/';
 
   const handleSubmission = () => {
 
@@ -191,9 +191,7 @@ function Playground() {
   useEffect(() => {
     // On mount initialize the socket connection
    if(logedIn === true){ 
-      setSocketClient(io(Web_URL, {
-        autoConnect: false
-      }))
+      setSocketClient(io(Web_URL))
     }
     
     // Dispose gracefuly
