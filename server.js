@@ -4,7 +4,8 @@ import Router from 'express-promise-router'
 import { createServer } from 'vite'
 import viteConfig from './vite.config.js'
 import { Server } from 'socket.io'
-import http from 'http'
+import cors from 'cors'
+
 
 // Create router
 const router = Router()
@@ -39,11 +40,17 @@ app.use(router)
 
 const port = process.env.PORT || 4000;
 
-const server = app.listen(port, () => {
+app.listen(port, () => {
     console.log(`Listening on port http://localhost:${4000}...`)
 })
 
-const ioServer = new Server(server)
+const Web_URL = 'http://metaverse-watsuankaew-s6204062616243-kmutnbacth.vercel.app/'
+
+const ioServer = new Server({
+    cors: {
+        origin: Web_URL
+    }
+})
 
 let clients = {}
 const messages = [];
